@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DownloadFileController;
+use App\Http\Controllers\DownloadController;
  
  
-Route::get('/', [DownloadFileController::class, 'index']);
-Route::get('get/{file_name}', [DownloadFileController::class, 'downloadFile']);
+// Route::get('/', [DownloadController::class, 'index']);
+Route::get('get/{file_name}', [DownloadController::class, 'downloadFile']);
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,6 @@ Route::get('get/{file_name}', [DownloadFileController::class, 'downloadFile']);
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
